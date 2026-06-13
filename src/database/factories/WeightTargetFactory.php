@@ -14,7 +14,7 @@ class WeightTargetFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'target_weight' => $this->faker->randomFloat(1, 35, 150),
         ];
     }
 }
