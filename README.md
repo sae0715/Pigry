@@ -105,5 +105,5 @@ php artisan db:seed
 | GET | /weight_logs/goal_setting | 目標体重設定 |
 | PUT | /weight_logs/goal_setting | 目標体重更新 |
 | GET | /weight_logs/{id} | 体重ログ詳細 |
-| PUT | /weight_logs/{id} | 体重ログ更新 |
-| DELETE | /weight_logs/{id} | 体重ログ削除 |
+| PUT | /weight_logs/{id}/update | 体重ログ更新 |
+| DELETE | /weight_logs/{id}/delete | 体重ログ削除 |
