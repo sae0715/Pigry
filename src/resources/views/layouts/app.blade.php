@@ -16,10 +16,10 @@
     <header class="header">
         <p class="header-logo">PiGLy</p>
         <div class="header-nav">
-            <a href="/weight_logs/goal_setting">⚙ 目標体重設定</a>
+            <a href="/weight_logs/goal_setting"><i class="fas fa-cog"></i> 目標体重設定</a>
             <form action="/logout" method="POST">
                 @csrf
-                <button type="submit">ログアウト</button>
+                <button type="submit"><i class="fas fa-door-open"></i> ログアウト</button>
             </form>
         </div>
     </header>

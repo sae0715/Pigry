@@ -49,7 +49,7 @@
                 @error('exercise_content')<p class="error-message">{{ $message }}</p>@enderror
             </div>
             <div class="btn-group">
-                <button type="button" class="btn-back" onclick="document.getElementById('modal').style.display='none'">戻る</button>
+                <a href="/weight_logs" class="btn-back">戻る</a>
                 <button type="submit" class="btn-submit">登録</button>
             </div>
         </form>

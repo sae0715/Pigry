@@ -4,7 +4,7 @@
 <div class="show-card">
     <h2>Weight Log</h2>
 
-    <form action="/weight_logs/{{ $weightLog->id }}" method="POST">
+    <form action="/weight_logs/{{ $weightLog->id }}/update" method="POST">
         @csrf
         @method('PUT')
 
@@ -50,7 +50,7 @@
         </div>
     </form>
 
-    <form action="/weight_logs/{{ $weightLog->id }}" method="POST">
+    <form action="/weight_logs/{{ $weightLog->id }}/delete" method="POST">
         @csrf
         @method('DELETE')
         <button type="submit" class="btn-delete">🗑</button>

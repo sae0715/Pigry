@@ -33,6 +33,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/weight_logs/search', [WeightLogController::class, 'search']);
 
     Route::get('/weight_logs/{weightLog}', [WeightLogController::class, 'show']);
-    Route::put('/weight_logs/{weightLog}', [WeightLogController::class, 'update']);
-    Route::delete('/weight_logs/{weightLog}', [WeightLogController::class, 'destroy']);
+    Route::put('/weight_logs/{weightLog}/update', [WeightLogController::class, 'update']);
+    Route::delete('/weight_logs/{weightLog}/delete', [WeightLogController::class, 'destroy']);
 });
