@@ -1,0 +1,55 @@
+.auth-body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8b4d9, #f9a8c9, #fca5a5, #f87171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #c084fc;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 16px;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.step {
+    text-align: center;
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 32px;
+}
+
+.auth-link {
+    text-align: center;
+}
+
+.auth-link a {
+    color: #60a5fa;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.btn-submit {
+    width: 100%;
+}

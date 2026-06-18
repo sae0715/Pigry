@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\WeightTarget;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\WeightTargetRequest;
 
 class WeightTargetController extends Controller
 {
@@ -15,7 +15,7 @@ class WeightTargetController extends Controller
         return view('weight_logs.goal_setting', compact('weight_target'));
     }
 
-    public function update(Request $request)
+    public function update(WeightTargetRequest $request)
     {
         $user = Auth::user();
         $weight_target = WeightTarget::where('user_id', $user->id)->first();

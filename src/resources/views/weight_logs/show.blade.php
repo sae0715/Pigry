@@ -9,22 +9,22 @@
         @method('PUT')
 
         <div class="form-group">
-            <label>日付</label>
+            <label>日付<span class="required-badge">必須</span></label>
             <input type="date" name="date" value="{{ $weightLog->date }}">
             @error('date')<p class="error-message">{{ $message }}</p>@enderror
         </div>
 
         <div class="form-group">
-            <label>体重</label>
+            <label>体重<span class="required-badge">必須</span></label>
             <div class="input-with-unit">
-                <input type="number" name="weight" step="0.1" value="{{ $weightLog->weight }}">
+                <input type="number" name="weight" step="any" value="{{ $weightLog->weight }}">
                 <span class="unit">kg</span>
             </div>
             @error('weight')<p class="error-message">{{ $message }}</p>@enderror
         </div>
 
         <div class="form-group">
-            <label>摂取カロリー</label>
+            <label>摂取カロリー<span class="required-badge">必須</span></label>
             <div class="input-with-unit">
                 <input type="number" name="calories" value="{{ $weightLog->calories }}">
                 <span class="unit">cal</span>
@@ -33,7 +33,7 @@
         </div>
 
         <div class="form-group">
-            <label>運動時間</label>
+            <label>運動時間<span class="required-badge">必須</span></label>
             <input type="time" name="exercise_time" value="{{ substr($weightLog->exercise_time, 0, 5) }}">
             @error('exercise_time')<p class="error-message">{{ $message }}</p>@enderror
         </div>

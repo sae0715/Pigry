@@ -16,10 +16,6 @@ use App\Http\Controllers\WeightTargetController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/register/step1', [RegisterController::class, 'showStep1']);
 Route::post('/register/step1', [RegisterController::class, 'storeStep1']);
 

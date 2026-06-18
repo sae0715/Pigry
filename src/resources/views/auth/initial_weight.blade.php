@@ -12,7 +12,7 @@
         <div class="form-group">
             <label for="weight">現在の体重</label>
             <div class="input-with-unit">
-                <input type="number" id="weight" name="weight" placeholder="現在の体重を入力" value="{{old('weight')}}">
+                <input type="number" id="weight" name="weight" step="any" placeholder="現在の体重を入力" value="{{old('weight')}}">
                 <span class="unit">kg</span>
             </div>
             @error('weight')
@@ -23,7 +23,7 @@
         <div class="form-group">
             <label for="target_weight">目標の体重</label>
             <div class="input-with-unit">
-                <input type="number" id="target_weight" name="target_weight" placeholder="目標の体重を入力" value="{{old('target_weight')}}">
+                <input type="number" id="target_weight" name="target_weight" step="any" placeholder="目標の体重を入力" value="{{old('target_weight')}}">
                 <span class="unit">kg</span>
             </div>
             @error('target_weight')

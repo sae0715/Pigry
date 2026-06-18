@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="show-card">
+<div class="show-card goal-card">
     <h2>目標体重設定</h2>
 
     <form action="/weight_logs/goal_setting" method="POST">
@@ -10,7 +10,7 @@
 
         <div class="form-group">
             <div class="input-with-unit">
-                <input type="number" name="target_weight" step="0.1" value="{{ $weight_target->target_weight }}">
+                <input type="number" name="target_weight" step="any" value="{{ old('target_weight', $weight_target->target_weight) }}">
                 <span class="unit">kg</span>
             </div>
             @error('target_weight')<p class="error-message">{{ $message }}</p>@enderror
