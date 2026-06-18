@@ -3,6 +3,7 @@
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WeightLogController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WeightTargetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,15 @@ Route::post('/register/step2', [RegisterController::class, 'storeStep2']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/weight_logs', [WeightLogController::class, 'index']);
+    Route::get('/weight_logs/create', [WeightLogController::class, 'create']);
+    Route::post('/weight_logs', [WeightLogController::class, 'store']);
+
+    Route::get('/weight_logs/goal_setting', [WeightTargetController::class, 'edit']);
+    Route::put('/weight_logs/goal_setting', [WeightTargetController::class, 'update']);
+
+    Route::get('/weight_logs/search', [WeightLogController::class, 'search']);
+
+    Route::get('/weight_logs/{weightLog}', [WeightLogController::class, 'show']);
+    Route::put('/weight_logs/{weightLog}', [WeightLogController::class, 'update']);
+    Route::delete('/weight_logs/{weightLog}', [WeightLogController::class, 'destroy']);
 });
