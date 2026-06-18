@@ -68,10 +68,17 @@ php artisan key:generate
 # データベースを初期化
 php artisan migrate
 php artisan db:seed
+
+# コンテナから出る
+exit
+
+# コンテナの外で実行
+docker-compose exec php chown -R www-data:www-data storage
+docker-compose exec php chmod -R 775 storage
 ```
 
 ## 使用技術（実行環境）
-- PHP 8.5.0
+- PHP 7.4.9
 - Laravel 8.83.27
 - MySQL 8.0
 - Laravel Fortify（認証）

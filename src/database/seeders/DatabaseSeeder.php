@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $user = User::factory()->create([
             'name' => 'テストユーザー',
             'email' => 'test@example.com',
-            'password' => bcrypt('password123'),
+            'password' => bcrypt('password'),
         ]);
 
         WeightTarget::factory()->create([
