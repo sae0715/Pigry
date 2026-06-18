@@ -1,12 +1,7 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CsvDownloadController;
-use App\Models\Contact;
-use App\Models\Category;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +16,14 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/register/step1', [RegisterController::class, 'showStep1']);
+Route::post('/register/step1', [RegisterController::class, 'storeStep1']);
+
+Route::get('/register/step2', [RegisterController::class, 'showStep2']);
+Route::post('/register/step2', [RegisterController::class, 'storeStep2']);
+
+Route::get('/weight_logs', function () {
+    return view('/weight_logs.index');
 });
