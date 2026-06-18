@@ -22,12 +22,18 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
         ]);
 
-        WeightTarget::factory()->create([
-            'user_id' => $user->id,
-        ]);
+        WeightLog::factory(35)->create(['user_id' => $user->id]);
 
-        WeightLog::factory(35)->create([
+        // 最新体重を取得
+        $latestWeight = WeightLog::where('user_id', $user->id)
+            ->orderBy('date', 'desc')
+            ->first()
+            ->weight;
+
+        // 目標体重 = 最新体重より5〜15kg低く設定
+        WeightTarget::create([
             'user_id' => $user->id,
+            'target_weight' => round($latestWeight - rand(5, 15), 1),
         ]);
     }
 }

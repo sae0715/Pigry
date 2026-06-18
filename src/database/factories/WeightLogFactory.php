@@ -25,7 +25,7 @@ class WeightLogFactory extends Factory
     {
         return [
             'date' => $this->faker->dateTimeBetween('-1 month', 'now')->format('Y-m-d'),
-            'weight' => round($this->baseWeight + $this->faker->randomFloat(1, -0.8, 1.0), 1),
+            'weight' => round($this->baseWeight + $this->faker->randomFloat(1, -0.6, 0.2), 1),
             'calories' => $this->faker->numberBetween(1000, 3000),
             'exercise_time' => $this->faker->time('H:i:s'),
             'exercise_content' => implode('、', $this->faker->randomElements([
